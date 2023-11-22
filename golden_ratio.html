@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="golden_ratio.css">
+</head>
+<body>
+    <div id="bg">
+        <canvas></canvas>
+        <canvas></canvas>
+        <canvas></canvas>
+      </div>
+
+      <div class="content">
+        <h1>Golden Ratio</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Defination</span>
+                <div class="text">
+                    <p>Two numbers are said to be in golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities.</p>
+                    <br>
+                    <p>Expressed algebraically, for any two numbers a > 0, b > 0 if <span class="frac"><sup>a + b</sup><span>&frasl;</span><sub>2</sub></span> = <span class="frac"><sup>a</sup><span>&frasl;</span><sub>b</sub></span> , then a, b are said to be in golden ratio. This ratio is usually denoted by Greek letter <span class="blue">φ (phi)</span>. It is an irrational number that is a solution to the quadratic equation x²-x-1=0 with a value of φ = <span class="frac"><sup>1 + √5</sup><span>&frasl;</span><sub>2</sub></span> = <span class="gold">1.618033988749...</span></p>
+                </div>
+                <img src="Golden_ratio_line.svg" class="golden_ratio" alt="">
+            </section>
+            <section class="section-2">
+                <span class="div-heading">Calculation</span>
+                <div class="text">
+                    <p>
+                        Let the two quantities a and b are in the golden ratio q, then<br>
+                        <frac numerator="a + b" denominator="a"></frac> =  <frac numerator="a" denominator="a"></frac> = φ
+                    </p>
+                    <p>
+                        One method for finding the value of @ is to start with the left fraction. Through simplifying the fraction and substituting in <frac numerator="b" denominator="a"></frac> = <frac numerator="1" denominator="φ"></frac>,<br>
+                        <frac numerator="a + b" denominator="a"></frac> = 1 + <frac numerator="b" denominator="a"></frac> = 1 + <frac numerator="1" denominator="φ"></frac> = φ<br>
+                        Therefore,<br>
+                        1 + <frac numerator="1" denominator="φ"></frac> = φ.<br>
+                    </p>
+                    <p>
+                        Multiplying by φ gives φ + 1 = φ<sup>2</sup>, Which can be rearranged to<br>
+                        φ<sup>2</sup> - φ - 1 = 0.<br>
+                        Using the quadratic formula, two solutions are obtained:<br>
+                        <frac numerator="1 + √5" denominator="2"></frac> = 1.618033988749... and <frac numerator="1 - √5" denominator="2"></frac> = -0.618033988749...<br>
+                        Because φ is the ratio between positive quantities, it is necessarily the positive one.<br>
+                        Therefore <frac numerator="1 + √5" denominator="2"></frac> = 1.618033988749... is the golden ratio.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="controls">
+            <a href="index.html">
+                <div class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </div>
+            </a>
+            <div class="pageof">Page 2 of 7</div>
+            <a href="fibonacci_series.html">
+                <div class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+      </div>
+
+      
+<script src="bg.js"></script>
+<script src="fraction.js"></script>
+</body>
+</html>
