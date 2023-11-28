@@ -135,6 +135,15 @@ section {
     grid-column: 2/3;
 }
 
+.section-6 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.section-7 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
 .bg-ele {
     background-color: transparent;
     backdrop-filter: none;
@@ -193,6 +202,12 @@ section {
     height: 260px;
 }
 .free.architecture img {
+    height: 260px;
+}
+.free.art img {
+    height: 260px;
+}
+.free.human-body img {
     height: 260px;
 }
 
@@ -288,11 +303,66 @@ section {
 }
 
 
+.free.art:nth-of-type(2) {
+    bottom: 14%;
+    left: 4%;
+    z-index: 9;
+}
+.free.art:nth-of-type(2) img {
+    height: 320px;
+}
+.free.art:nth-of-type(3) {
+    bottom: 17%;
+    left: 40%;
+}
+.free.art:nth-of-type(4) {
+    bottom: 6%;
+    left: 20%;
+}
+.free.art:nth-of-type(5) {
+    bottom: 10%;
+    right: 17%;
+}
+.free.art:nth-of-type(5) img {
+    height: 300px;
+}
+.free.art:nth-of-type(6) {
+    bottom: 10%;
+    right: 5%;
+}
+.free.art:nth-of-type(6) img {
+    height: 300px;
+}
+
+
+.free.human-body:nth-of-type(2) {
+    top: 40%;
+    right: 8%;
+}
+.free.human-body:nth-of-type(3) {
+    top: 8%;
+    right: 40%;
+}
+.free.human-body:nth-of-type(3) img {
+    height: 300px;
+}
+.free.human-body:nth-of-type(4) {
+    top: 50%;
+    right: 10%;
+}
+.free.human-body:nth-of-type(5) {
+    top: 2%;
+    right: 10%;
+}
+.free.human-body:nth-of-type(5) img {
+    height: 300px;
+}
 
 .media {
     padding: 0;
     width: fit-content;
     display: flex;
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 #visualization_wrapper {
@@ -662,4 +732,20 @@ a:visited {
 .main-title2 .small {
     font-size: 2.4rem;
     opacity: 0.8;
+}
+
+
+.bg-img {
+    height: 80%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0.8;
+}
+.bg-img.left {
+    left: 0 !important;
+}
+.bg-img.right {
+    right: 0 !important;
 }
