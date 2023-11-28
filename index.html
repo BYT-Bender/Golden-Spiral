@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script src="assets/script/jquery.min.js_3.7.1.js"></script>
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
+    <script id="MathJax-script" async src="assets/script/tex-mml-chtml.js"></script>
+    <script src="assets/script/p5.js"></script>
+    <script src="assets/script/sketch.js"></script>
+</head>
+<body>
+    
+    <div id="bg">
+        <canvas></canvas>
+        <canvas></canvas>
+        <canvas></canvas>
+    </div>
+
+    <div class="content" id="1">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <h1 class="main-title"><span class="thin">Fibonacci Series<br>and<br></span> Golden Ratio</h1>
+        </div>
+    </div>
+
+    <div class="content" id="2">
+        <h1>Golden Ratio</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Defination</span>
+                <div class="text">
+                    <p>Two numbers are said to be in golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities.</p>
+                    <br>
+                    <p>Expressed algebraically, for any two numbers a > 0, b > 0 if <span class="frac"><sup>a + b</sup><span>&frasl;</span><sub>2</sub></span> = <span class="frac"><sup>a</sup><span>&frasl;</span><sub>b</sub></span> , then a, b are said to be in golden ratio. This ratio is usually denoted by Greek letter <span class="blue">φ (phi)</span>. It is an irrational number that is a solution to the quadratic equation x²-x-1=0 with a value of φ = <span class="frac"><sup>1 + √5</sup><span>&frasl;</span><sub>2</sub></span> = <span class="gold">1.618033988749...</span></p>
+                </div>
+                <img src="assets/img/common/Golden_ratio_line.svg" class="golden_ratio" alt="">
+            </section>
+            <section class="section-2">
+                <span class="div-heading">Calculation</span>
+                <div class="text">
+                    <p>
+                        Let the two quantities a and b are in the golden ratio q, then<br>
+                        <frac numerator="a + b" denominator="a"></frac> =  <frac numerator="a" denominator="a"></frac> = φ
+                    </p>
+                    <p>
+                        One method for finding the value of @ is to start with the left fraction. Through simplifying the fraction and substituting in <frac numerator="b" denominator="a"></frac> = <frac numerator="1" denominator="φ"></frac>,<br>
+                        <frac numerator="a + b" denominator="a"></frac> = 1 + <frac numerator="b" denominator="a"></frac> = 1 + <frac numerator="1" denominator="φ"></frac> = φ<br>
+                        Therefore,<br>
+                        1 + <frac numerator="1" denominator="φ"></frac> = φ.<br>
+                    </p>
+                    <p>
+                        Multiplying by φ gives φ + 1 = φ<sup>2</sup>, Which can be rearranged to<br>
+                        φ<sup>2</sup> - φ - 1 = 0.<br>
+                        Using the quadratic formula, two solutions are obtained:<br>
+                        <frac numerator="1 + √5" denominator="2"></frac> = 1.618033988749... and <frac numerator="1 - √5" denominator="2"></frac> = -0.618033988749...<br>
+                        Because φ is the ratio between positive quantities, it is necessarily the positive one.<br>
+                        Therefore <frac numerator="1 + √5" denominator="2"></frac> = 1.618033988749... is the golden ratio.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="content" id="3">
+        <h1>Fibonacci Sequence</h1>
+        <div class="main-wrapper">
+            <section class="section-3" style="margin: 60px 50px 0;">
+                <span class="div-heading">Defination</span>
+                <div class="text">
+                    <p>
+                        A sequence &lt;F<sub>n</sub>&gt; defined by the recursive formula as given below is known as Fibonacci sequence.<br><br>
+                        F<sub>1</sub> = 1, F<sub>2</sub> = 1, F<sub>n-2</sub> + F<sub>n-1</sub> ∀ n ≥ 3.<br><br>
+                    </p>
+                    <p>
+                        The Fibonacci numbers were first described in Indian mathematics as early as 200 BC in work by <b>Pingala</b> on enumerating possible patterns of Sanskrit poetry formed from syllables of two lengths. They are named after the Italian mathematician Leonardo of Pisa, later known as <span class="blue">Fibonacci</span>, who introduced the sequence to Western European mathematics in his 1202 book <i class="yellow">Liber Abaci</i>.          
+                    </p>
+                </div>
+            </section>
+
+            <div class="avatar">
+                <div class="page__demo">
+                    <a href="#0" class="mask mask_type2 mask_type2-a1 page__tile">
+                        <img src="assets/img/common/fibonacci.jpg" class="mask__img" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sequence-counter">
+            <div class="counter">
+                <div id="index">-</div>
+                <div id="number">- -</div>
+            </div>
+            <div class="btn" id="counter-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content" id="4">
+        <h1>Golden Spiral / Fibonacci Spiral</h1>
+        <div class="main-wrapper">
+            <section class="section-1 media">
+                <div id="visualization_wrapper"></div>
+            </section>
+            <section class="section-4">
+                <span class="div-heading">Defination</span>
+                <div class="text">
+                    <p>
+                        In geometry, a golden spiral is a logarithmic spiral whose growth factor is φ, the golden ratio. That is, a golden spiral gets wider (or further from its origin) by a factor of φ for every quarter turn it makes. A Fibonacci spiral which approximate the golden spiral using Fibonacci sequence square sizes up to 34. The spiral is drawn starting from the inner 1 X 1 square and continues outwards to successively larger squares.
+                    </p>
+                    <!-- <img src="assets/img/common/Fibonacci_sequence.webp" class="fibonacci_sequence" alt=""> -->
+                </div>
+            </section>
+            <section class="section-5">
+                <span class="div-heading">Defination</span>
+                <div class="text">
+                    <p>
+                        The Golden Spiral can be used as a guide to determine the placement of content. Our eye is naturally drawn to the center of the spiral, which is where it will look for details, so focus your design on the center of the spiral and place areas of visual interest within the spiral.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="content" id="5">
+        <h1>Estimating The Golden Ratio</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Explanation</span>
+                <div class="text">
+                    <p>
+                        To estimate φ through the Fibonacci sequence, one calculates the ratio \[{F_{n} \over F_{n-1}}\] for successive terms. As n increases, these ratios approach the Golden Ratio. Mathematically, this convergence is expressed as \[lim_{x \to 2} {F_{n} \over F_{n-1}} = φ\]
+                    </p><br>
+                    <p>
+                        This numerical convergence is a consequence of the recursive nature of the Fibonacci sequence, revealing an intrinsic connection with the Golden Ratio. The calculation of these ratios provides a tangible and illustrative method for estimating the Golden Ratio, offering a dynamic exploration of the mathematical beauty embedded in the Fibonacci sequence.
+                    </p>
+                </div>
+            </section>
+            <section class="section-4 media">
+                <div class="graph-wrapper">
+                    <canvas id="graph"></canvas>
+                    <button onclick="restart();" class="reload-graph">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                        </svg>
+                    </button>
+                  </div>
+            </section>
+            <section class="bg-ele media">
+                <div class="graph-wrapper">
+                    <canvas id="graph2"></canvas>
+                  </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="content ob" id="6">
+        <h1 class="main-title2"><span class="thin">Applications and observations <br><span class="small">of</span><br></span> Golden Ratio</h1>
+    </div>
+
+    <div class="content" id="7">
+        <h1>Golden Ratio in Nature</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Explanation</span>
+                <div class="text">
+                    <p>
+                        Many patterns in nature including ferns, flowers, seashells, galaxy, even hurricanes, which perhaps why we find it so visually appealing. Because it is, indeed, nature at its finest golden ratio. All these are in pattern of golden spiral.
+                    </p>
+                </div>
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/1.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/2.webp" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/3.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/4.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/5.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/6.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/7.webp" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/8.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/9.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/10.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media nature">
+                <img class="lazy-img" src="assets/img/nature/11.jpg" alt="" loading="lazy">
+            </section>
+        </div>
+    </div>
+
+    <div class="content" id="8">
+        <h1>Golden Ratio in Photography</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Explanation</span>
+                <div class="text">
+                    <p>
+                        The Fibonacci spiral is one of the main ways photographers can use the golden ratio in photography. Many famous photographers are known for their use of the golden ratio in photography few of them are Ansel Adams and Henri Cartier-Bresson who used it often in their landscape portraits that they captured.
+                    </p>
+                </div>
+            </section>
+            <section class="free media photography">
+                <img class="lazy-img" src="assets/img/photography/1.webp" alt="" loading="lazy">
+            </section>
+            <section class="free media photography">
+                <img class="lazy-img" src="assets/img/photography/2.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media photography">
+                <img class="lazy-img" src="assets/img/photography/3.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media photography">
+                <img class="lazy-img" src="assets/img/photography/4.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media photography">
+                <img class="lazy-img" src="assets/img/photography/5.jpg" alt="" loading="lazy">
+            </section>
+        </div>
+    </div>
+
+    <div class="content" id="9">
+        <h1>Golden Ratio in Architecture</h1>
+        <div class="main-wrapper">
+            <section class="section-1">
+                <span class="div-heading">Explanation</span>
+                <div class="text">
+                    <p>
+                        The Greek sculptor Phidias sculpted many things including the bands of sculpture that run above the columns of the <span class="yellow">Parthenon</span>. Even from the time of the Greeks, a rectangle whose sides are in the "golden proportion" has been known since it occurs naturally in some of the proportions of the Five Platonic. This rectangle is supposed to appear in many of the proportions of that famous ancient Greek temple in the Acropolis in Athens, Greece. The <span class="yellow">Taj Mahal</span> in India was also constructed using the Golden Ratio. The main building of the Taj Mahal was designed using the Golden Ratio. This is why it looks so perfect. The rectangles that served as the basic outline for the exterior of the building were all in the Golden Proportion. The Ahmes papyrus of Egypt gives an account of the building of the <span class="yellow">Great Pyramid of Giaz</span> in 4700 B.C. with proportions according to a "sacred ratio."
+                    </p>
+                </div>
+            </section>
+            <section class="free media architecture">
+                <img class="lazy-img" src="assets/img/architecture/1.webp" alt="" loading="lazy">
+            </section>
+            <section class="free media architecture">
+                <img class="lazy-img" src="assets/img/architecture/2.jpg" alt="" loading="lazy">
+            </section>
+            <section class="free media architecture">
+                <img class="lazy-img" src="assets/img/architecture/3.png" alt="" loading="lazy">
+            </section>
+            <section class="free media architecture">
+                <img class="lazy-img" src="assets/img/architecture/4.jpg" alt="" loading="lazy">
+            </section>
+        </div>
+    </div>
+    
+    <script src="assets/script/bg.js"></script>
+    <script src="assets/script/fraction.js"></script>
+    <script src="assets/script/series.js"></script>
+    <script src="assets/script/graph.js"></script>
+    <script src="assets/script/graph2.js"></script>
+    <script src='assets/script/TweenLite.min.js'></script>
+    <script src='assets/script/EasePack.min.js'></script>
+    <script src='assets/script/demo.js'></script>
+    <script src="assets/script/script.js"></script>
+
+</body>
+</html>
